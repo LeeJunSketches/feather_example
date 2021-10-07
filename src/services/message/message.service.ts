@@ -5,7 +5,7 @@ import hooks from './message.hook';
 
 
 export default function (app: Application): void {
-    app.use('/messages', new Messages())
-    const service = app.service('messages')
-    service.hooks(hooks)
+  app.use('/messages', new Messages());
+  const service = app.service('messages');
+  service.hooks(hooks);
 }

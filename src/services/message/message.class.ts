@@ -8,18 +8,18 @@ export class Messages {
     messages: Message[] = [];
 
     async find() {
-        return this.messages;
+      return this.messages;
     }
 
     async create(data: Pick<Message, 'text' | 'createdAt'>) {
-        const message: Message = {
-            id: this.messages.length,
-            text: data.text,
-            createdAt: data.createdAt
-        }
+      const message: Message = {
+        id: this.messages.length,
+        text: data.text,
+        createdAt: data.createdAt
+      };
 
-        this.messages.push(message);
+      this.messages.push(message);
 
-        return message;
+      return message;
     }
 }
